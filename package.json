@@ -1,0 +1,20 @@
+{
+  "name": "solc-compiler-proxy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo src/index.js:bundle.js --dir ./src --live --open",
+    "build": "browserify --full-paths src/index.js > bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "budo": "^11.6.2"
+  },
+  "dependencies": {
+    "solc-version": "^0.2.0",
+    "tiny-worker": "^2.2.0"
+  }
+}
