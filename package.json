@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run build",
     "start": "budo src/index.js:bundle.js --dir ./src --live --open",
-    "build": "browserify --full-paths src/index.js > bundle.js"
+    "build": "browserify src/webworker-compiler.js > src/compiler-bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,9 @@
     "budo": "^11.6.2"
   },
   "dependencies": {
+    "solc-js": "^1.0.0",
     "solc-version": "^0.2.0",
+    "solidity-validator": "^0.4.0",
     "tiny-worker": "^2.2.0"
   }
 }
